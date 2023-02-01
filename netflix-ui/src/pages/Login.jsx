@@ -21,10 +21,9 @@ function Login() {
     }
   };
 
-  onAuthStateChanged(firebaseAuth,(currentUser)=>{
-    if(currentUser)setEmail(currentUser.email);
-    else navigate("/login")
-})
+  onAuthStateChanged(firebaseAuth, (currentUser) => {
+    if (currentUser) navigate("/");
+  });
 
 
   return (
@@ -50,7 +49,7 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
               />
-              <button onClick={handleLogin}>Login to your account</button>
+              <button onClick={handleLogin}>Login </button>
             </div>
           </div>
         </div>

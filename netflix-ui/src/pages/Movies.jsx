@@ -27,15 +27,17 @@ import { onAuthStateChanged } from 'firebase/auth';
 
                 }, [])
 
+                
+  const [user, setUser] = useState(undefined);
                 useEffect(()=>{
                 if(genresLoaded)dispath(fetchMovies({type:"movie"}))
                 },[genresLoaded])
                 
                 console.log(movies);
-                // onAuthStateChanged(firebaseAuth, (currentUser) => {
-                //     if (currentUser) navigate("/");
-                //   });
-                
+                onAuthStateChanged(firebaseAuth, (currentUser) => {
+                    if (currentUser) setUser(currentUser.uid);
+                    else navigate("/login");
+                  });
 
             return (
                 <Container>

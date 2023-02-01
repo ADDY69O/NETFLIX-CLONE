@@ -35,10 +35,9 @@ import { onAuthStateChanged } from 'firebase/auth'
       },[])
       
       console.log(movies);
-    //   onAuthStateChanged(firebaseAuth,(currentUser)=>{
-    //     if(currentUser)setEmail(currentUser.email);
-    //     else navigate("/login")
-    // })
+      onAuthStateChanged(firebaseAuth, (currentUser) => {
+        if (!currentUser) navigate("/login");
+      });
 
     
 

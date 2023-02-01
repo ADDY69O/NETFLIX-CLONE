@@ -26,17 +26,15 @@ import { onAuthStateChanged } from 'firebase/auth';
                 dispath(getGenres());
 
                 }, [])
-
+                const [user, setUser] = useState(undefined);
                 useEffect(()=>{
                 if(genresLoaded)dispath(fetchMovies({type:"tv"}))
                 },[genresLoaded])
                 
-                
-                // onAuthStateChanged(firebaseAuth,(currentUser)=>{
-                //     if(currentUser)setEmail(currentUser.email);
-                //     else navigate("/login")
-                // })
-                
+                onAuthStateChanged(firebaseAuth, (currentUser) => {
+                    if (currentUser) setUser(currentUser.uid);
+                    else navigate("/login");
+                  });
 
             return (
                 <Container>
