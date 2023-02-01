@@ -26,21 +26,28 @@
 # Preview
 
 <p align="center">
-  <img src="img/image3.PNG"
+  <img src="netflix-ui/src/assest/loginMain.jpg"
      alt="Netflix Landing Page" >
 </p>
 
 <p align="center">
-  <img src="img/image1.PNG"
+  <img src="netflix-ui/src/assest/landingMain.jpg"
      alt="Netflix Home Page" >
 </p>
 <p align="center">
-  <img src="img/image2.PNG"
+  <img src="netflix-ui/src/assest/sliderMain.jpg"
      alt="Netflix Movies slider" >
 </p>
 <p align="center">
-  A GIF will be provided Soon
+  <img src="netflix-ui/src/assest/genresMain.jpg"
+     alt="Netflix Movies through diffrent genres" >
 </p>
+<p align="center">
+  <img src="netflix-ui/src/assest/myListmain.jpg"
+     alt="Netflix my list page" >
+</p>
+
+
 
 # Tech Stack
 
